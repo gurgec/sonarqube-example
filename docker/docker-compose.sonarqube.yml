@@ -1,0 +1,11 @@
+version: '3.1'
+services:
+  sonarqube:
+    image: sonarqube:8.6.1-community
+    expose:
+      - 9000
+    ports:
+      - "127.0.0.1:9000:9000"
+    volumes:
+      - ./sonarqube/sonarqube-community-branch-plugin-1.6.0.jar:/opt/sonarqube/extensions/plugins/sonarqube-community-branch-plugin-1.6.0.jar
+      - ./sonarqube/sonarqube-community-branch-plugin-1.6.0.jar:/opt/sonarqube/lib/common/sonarqube-community-branch-plugin-1.6.0.jar
